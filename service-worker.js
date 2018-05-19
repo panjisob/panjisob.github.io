@@ -25,7 +25,7 @@ var filesToCache = [
     'images/3.png',
     'images/home.jpg',
     'images/home1.jpg',
-    'images/home2.jpg'
+    'images/hom.jpg'
 ];
 
 self.addEventListener('install', function(e) {
