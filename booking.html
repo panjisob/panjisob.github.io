@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Booking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="app.js"></script>
+</head>
+<body>
+    
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+
+<!-- Add additional services you want to use -->
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-database.js"></script>
+<script>
+//      Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyALHwmtcjg39w6g3p1AFlbJriQovbkJFUc",
+        authDomain: "webmobile-1b844.firebaseapp.com",
+        databaseURL: "https://webmobile-1b844.firebaseio.com",
+        projectId: "webmobile-1b844",
+        storageBucket: "webmobile-1b844.appspot.com",
+       messagingSenderId: "443185841354"
+    };
+    firebase.initializeApp(config);
+
+  //Get a reference to the database service
+    var database = firebase.database();
+    var booking = database.ref('Boking');
+    booking.on('value', showData, showError);
+
+    function showData(items){
+        console.log(items.val().senin.jam9);
+    }
+    function showError(err){
+        console.log(err);
+    }
+    console.log(booking);
+
+</script>
+</html>
