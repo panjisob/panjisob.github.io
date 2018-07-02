@@ -3,6 +3,7 @@ var filesToCache = [
     '.',
     'index.php',
     'index.html',
+    'produk.html',
     'css/bootstrap.css',
     'css/bootstrap.min.css',
     'css/mdb.css',
