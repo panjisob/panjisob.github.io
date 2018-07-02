@@ -31,6 +31,7 @@ var filesToCache = [
     'images/p4.jpg',
     'images/p5.jpg',
     'images/p6.jpg',
+    'images/products.JPG',
     'js/bootstrap.js',
     'js/bootstrap.min.js',
     'js/jquery-3.2.1.min.js',
