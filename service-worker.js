@@ -10,6 +10,7 @@ var filesToCache = [
     'css/mdb.min.css',
     'css/style.css',
     'css/style.min.css',
+    'model.html',
     'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
     //'https://maps.googleapis.com/maps/api/js?key=AIzaSyAiwtjlLUES51ioTbDvTh07JRLmpwWtyYM&callback=initMap',
     'images/1.png',
@@ -37,6 +38,15 @@ var filesToCache = [
     'js/jquery-3.2.1.min.js',
     'js/mdb.js',
     'js/mdb.min.js',
+    'images/mr/1.jpg',
+    'images/mr/2.jpg',
+    'images/mr/3.jpg',
+    'images/mr/4.jpg',
+    'images/mr/5.jpg',
+    'images/mr/6.jpg',
+    'images/mr/7.jpg',
+    'images/mr/8.jpg',
+    'js/vue.js',
     'js/popper.min.js'
 
 ];

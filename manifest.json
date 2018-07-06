@@ -2,7 +2,7 @@
   "name": "BBShop",
   "short_name": "BBShop",
   "theme_color": "#2196f3",
-  "background_color": "#549dd7",
+  "background_color": "#212529",
   "display": "standalone",
   "Scope": "/",
   "start_url": "/index.html",
