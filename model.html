@@ -162,7 +162,7 @@
       <button @click="clear">clear</button>
       <button @click="add(employee)">Add data </button> -->
         <!--Section: Products v.3-->
-        <button @click="add(employee)">Add data </button>
+        <button @click="add()">Add data </button>
       <section class="text-center mb-4" v-on:onload="add(employee)">
 
           <!--Grid row-->
@@ -313,35 +313,58 @@
             id: null,
             name: null,
             age: 0,
-            email: null
           },
           employees: [],
           retryCount: 0,
     
         }
       },
+      beforeMount(){
+        this.add()
+      },
       mounted(){
+        this.add()
         this.readAll()
       },
     
       methods:{
-        add(employee) {
+        add:function() {
           var vm = this
           let request = new Promise((resolve, reject) => {
             var request = db.transaction(["employee"], "readwrite")
             .objectStore("employee").add({ 
-              id: 10 ,
+              id: 1 ,
               name: "Model Balded Fade and Long Loose Hair", 
-              age: "images/mr/1.jpg", 
-              email:employee.email 
+              age: "images/mr/1.jpg"
+              //email:employee.email 
             })
             request.onsuccess = function(event) {
               vm.employees.push({ 
                 edit: false,
-                id: employee.id != null ? vm.employee.id : vm.employees.length++ ,
-                name: employee.name, 
-                age: employee.age, 
-                email: employee.email 
+                id: 1 ,
+                name: "Model Balded Fade and Long Loose Hair", 
+                age: "images/mr/1.jpg"
+                //email: employee.email 
+              },{
+                edit: false,
+                id: 2 ,
+                name: "Model Balded Fade and Long Loose Hair", 
+                age: "images/mr/2.jpg"
+              },{
+                edit: false,
+                id: 3 ,
+                name: "Model Balded Fade and Long Loose Hair", 
+                age: "images/mr/3.jpg"
+              },{
+                edit: false,
+                id: 4 ,
+                name: "Model Balded Fade and Long Loose Hair", 
+                age: "images/mr/4.jpg"
+              },{
+                edit: false,
+                id: 5 ,
+                name: "Model Balded Fade and Long Loose Hair", 
+                age: "images/mr/5.jpg"
               })
             }
             request.onerror = function(event) {
@@ -376,7 +399,7 @@
     
                 if (cursor) {
                   if(vm.employees){
-                    vm.employees.push({ edit: false,  id: cursor.key , name: cursor.value.name , age:cursor.value.age, email:cursor.value.email});
+                    vm.employees.push({ edit: false,  id: cursor.key , name: cursor.value.name , age:cursor.value.age});
     
                   }
                   cursor.continue();
@@ -403,6 +426,9 @@
           }
           setTimeout(function(){ vm.readAll() }, 100);
         }
+      },
+      created: function(){
+        this.add()
       }
     })
   </script>
